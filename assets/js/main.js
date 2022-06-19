@@ -1,28 +1,5 @@
-$(document).ready(function () {
-  // Smooth scrolling using jQuery easing
-  $('#NavMenu li a[href*="#"]:not([href="#"])').click(function () {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: (target.offset().top - 56)
-        }, 1000, "easeInOutExpo");
-        return false;
-      }
-    }
-  });
-
-  // Closes responsive menu when a scroll trigger link is clicked
-  $('#NavMenu li a').click(function () {
-    $('.navbar-collapse').collapse('hide');
-  });
-
-  // Activate scrollspy to add active class to navbar items on scroll
-  $('body').scrollspy({
-    target: '#NavMenu',
-    offset: 56
-  });
+(function ($) {
+  'use strict'
 
 
   $(window).on("scroll", function () {
@@ -33,132 +10,113 @@ $(document).ready(function () {
       $("#NavMenu").removeClass("menu-fixed");
     };
   });
-  /*
-      ========================================
-      Scroll to top
-      ========================================
-   */
-  $(window).on("scroll", function () {
-    var qScroll = $(this).scrollTop();
-    if (qScroll > 10) {
-      $("#scroll-top").addClass("scroll-top");
-    } else {
-      $("#scroll-top").removeClass("scroll-top");
-    };
-  });
 
-  $('.benner-slider').slick({
-    dots: true,
-    infinite: false,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    prevArrow: '<button class="fas fa-angle-left slide-arrow prev-arrow"></button>',
-    nextArrow: '<button class="fas fa-angle-right slide-arrow next-arrow"></button>'
-  });
+  if ($('.flyboy-item').length) {
+      var swiper = new Swiper(".flyboy-item", {
+          effect: "coverflow",
+          loop: true,
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+              rotate: 0,
+              stretch: 0,
+              depth: 100,
+              modifier: 2,
+              slideShadows: true,
+          },
+          navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+          },
+          
+          breakpoints: {
+              640: {
+                  coverflowEffect: {  
+                      depth: 100,
+                      modifier: 2,
+                      slideShadows: true,
+                  },
+              }
+          },
+      });
+  }
 
-
-
-  
-  
-  
-  $('.Nieuws-slider').slick({
-    dots: false,
-    infinite: false,
-    slidesToShow: 3,
-    centerPadding: '60px',
-    arrows: true,
-    autoPlay:true,
-    autoplaySpeed: 4000,
-    prevArrow: '<button class="fas fa-angle-left slide-arrow prev-arrow"></button>',
-    nextArrow: '<button class="fas fa-angle-right slide-arrow next-arrow"></button>',
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
+  if ($('.roadmap-slider').length) {
+      $('.roadmap-slider').slick({
+          dots: false,
+          infinite: true,
+          speed: 300,
+          prevArrow: '<button class="fa-solid fa-angle-right slide-arrow prev-arrow"></button>',
+          nextArrow: '<button class="fa-solid fa-angle-left slide-arrow next-arrow"></button>',
+          autoplay: false,
+          autoplaySpeed: 4000,
           centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }
-    ]
+          responsive: [{
+              breakpoint: 3000,
+              settings: {
+                  slidesToShow: 3.1,
+                  slidesToScroll: 1,
+              }
+          },
+          {
+              breakpoint: 1100,
+              settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+              }
+          },
+          {
+              breakpoint: 1024,
+              settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+              }
+          },
+          {
+              breakpoint: 600,
+              settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1
+              }
+          },
+          {
+              breakpoint: 480,
+              settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  centerMode: false,
+                  dots: true, 
+              }
+          }
+          ]
+
+      });
+  }
+
+  $(document).ready(($) => {
+      $('.quantity').on('click', '.plus', function() {
+        var $input = $(this).prev('input.qnty');
+        var val = parseInt($input.val());
+        $input.val( val+1 ).change();
+    });
+    
+    $('.quantity').on('click', '.minus', function() {
+        var $input = $(this).next('input.qnty');
+        var val = parseInt($input.val());
+        if (val > 0) {
+            $input.val( val-1 ).change();
+        } 
+    });
   });
 
 
-  $('.play').magnificPopup({
-    type: 'iframe',
-    disableOn: 400,
-    mainClass: 'mfp-fade'
-  });
+
+
+
+})(jQuery);
 
 
 
 
-  
-  
-  
-  $('.client-slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: '.client-slider-dot'
-  });
-  $('.client-slider-dot').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    centerPadding: '0px',
-    asNavFor: '.client-slider',
-    dots: false,
-    centerMode: true,
-    focusOnSelect: true,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    prevArrow: '<button class="fas fa-angle-left slide-arrow prev-arrow"></button>',
-    nextArrow: '<button class="fas fa-angle-right slide-arrow next-arrow"></button>'
-  });
 
-
-
-
-  $('.team-slider').slick({
-    dots: true,
-    arrows:false,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }
-    ]
-
-  });
-
-
-});

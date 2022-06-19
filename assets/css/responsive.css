@@ -1,0 +1,269 @@
+@media (min-width: 320px) and (max-width: 991.98px) { 
+    h1{
+        font-size: 40px;
+        padding-bottom: 20px;
+    }
+    .introduction-area .flyboy-item .swiper-wrapper .swiper-slide-prev { 
+        transform: translate3d(0px, 0px, -300px) rotateX(0deg) rotateY(0deg) scale(1) translateX(-45px) !important;
+    }
+    .mint-btn{
+        justify-content: center;
+    }
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media (min-width: 320px) and (max-width: 575.98px) { 
+    br{
+        display: none;
+    }
+    .my-menu{
+        display: none;
+    }
+    .offcanvas-body {
+        display: unset !important;
+    }
+    .icon-area{
+        padding-left: 10px;
+        padding-top: 30px;
+    }
+    .icon-area li {
+        margin-right: 20px;
+        margin-left: 0 !important;
+    }
+    .fly-shap{
+        display: none;
+    }
+    .btn{
+        display: block !important;
+    }
+    .body-shap1,
+    .body-shap2{
+        display: none;  
+    }
+    .team-content{
+        grid-template-columns: 1fr !important;
+        row-gap: 40px;
+    }
+   
+    .story-area .story-text p {
+       margin: 0 !important;
+       padding: 20px;
+        border: 2px solid #000;
+    }
+    .story-area::before,
+    .story-area::after {
+        display: none;
+    }
+    .flyboy-col{
+        order: 1;
+    }
+    .pt-5{
+        padding-top: 0 !important;
+    }
+    .flyboy-item{
+        padding-bottom: 30px !important;
+        max-width: 340px;
+    }
+    .slide-arrow{
+        display: none !important;
+    }
+    .footer-area .footer-icon {
+       display: none;
+    }
+    .footer-content{
+        grid-template-columns: 1fr 1fr !important;
+    }
+    .footer-area .footer-content .copyright {
+        text-align: right;
+    }
+    .footer-area .footer-tx {
+        padding: 0 !important;
+    }
+    .faq-area .accordion {
+        width: 100%;
+    }
+    .accordion-button {
+        padding: 10px 0;
+    }
+    .swiper-slide{
+        width: 206px !important;
+        height: 280px !important;
+    }
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    br{
+        display: none;
+    }
+    .my-menu{
+        display: none;
+    }
+    .icon-area{
+        padding-left: 10px;
+        padding-top: 30px;
+    }
+    .icon-area li {
+        margin-right: 20px;
+        margin-left: 0 !important;
+    }
+    .offcanvas-body {
+        display: unset !important;
+    }
+    .story-area .story-text p {
+        margin: 0 !important;
+        padding: 20px;
+         border: 2px solid #000;
+     }
+     .story-area::before,
+     .story-area::after {
+         display: none;
+     }
+    .fly-shap{
+        display: none;
+    }
+
+    
+    .btn{
+            display: block !important;
+        }
+
+    .body-shap1,
+    .body-shap2{
+        display: none;  
+    }
+    .slide-arrow{
+        display: none !important;
+    }
+    .team-content{
+        grid-template-columns: 1fr 1fr !important;
+        row-gap: 40px;
+    }
+    .flyboy-col{
+        order: 1;
+    }
+    .pt-5{
+        padding-top: 0 !important;
+    }
+    .flyboy-item{
+        padding-bottom: 30px !important;
+    }
+    .swiper-slide-next {
+        -webkit-transform: translate3d(0px, 0px, -300px) rotateX(0deg) rotateY(0deg) scale(1) translateX(-45px) !important;
+        transform: translate3d(0px, 0px, -300px) rotateX(0deg) rotateY(0deg) scale(1) translateX(-45px) !important;
+    }
+
+    .faq-area .accordion {
+        width: 100%;
+    }
+    .accordion-button {
+        padding: 10px 0;
+    }
+    .footer-area .footer-icon {
+        display: none;
+     }
+     .footer-content{
+         grid-template-columns: 1fr 1fr !important;
+     }
+     .footer-area .footer-content .copyright {
+         text-align: right;
+     }
+     .footer-area .footer-tx {
+         padding: 0 !important;
+     }
+     .swiper-slide{
+        width: 206px !important;
+        height: 280px !important;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .my-menu{
+        display: none;
+    }
+
+    .offcanvas-body {
+        display: unset !important;
+    }
+    .btn{
+        display: block !important;
+    }
+    .pt-5{
+        padding-top: 0 !important;
+    }
+    .fly-shap{
+        display: none;
+    }
+
+    
+    .flyboy-item{
+        padding-bottom: 30px !important;
+        max-width: 400px;
+    }
+    .flyboy-col{
+        order: 1;
+    }
+
+    .swiper-slide{
+        width: 206px !important;
+        height: 280px !important;
+    }
+
+    .swiper-slide-prev {
+        -webkit-transform: translate3d(0px, 0px, -300px) rotateX(0deg) rotateY(0deg) scale(1) translateX(145px) !important;
+        transform: translate3d(0px, 0px, -300px) rotateX(0deg) rotateY(0deg) scale(1) translateX(50px) !important;
+    }
+
+    .swiper-slide-next {
+        -webkit-transform: translate3d(0px, 0px, -300px) rotateX(0deg) rotateY(0deg) scale(1) translateX(-145px) !important;
+        transform: translate3d(0px, 0px, -300px) rotateX(0deg) rotateY(0deg) scale(1) translateX(-50px) !important;
+    }
+
+    .rm-shap{
+        display: none;
+    }
+
+    .body-shap1,
+    .body-shap2{
+        display: none;  
+    }
+
+    .team-content{
+        grid-template-columns: 1fr 1fr;
+        row-gap: 40px;
+    }
+    .flyboy-col{
+        order: 1;
+    }
+    .pt-5{
+        padding-top: 0 !important;
+    }
+    .flyboy-item{
+        padding-bottom: 30px !important;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .btn {
+        padding: 15px 25px !important;
+        font-size: 20px;
+    }
+    .introduction-area .flyboy-item .swiper-wrapper .swiper-slide {
+        width: 254px !important;
+        height: 374px;
+    }
+   
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1199.98px) and (max-width: 1400px) { 
+   
+    .introduction-area .flyboy-item .swiper-wrapper .swiper-slide {
+        width: 254px !important;
+        height: 374px;
+    }
+}
