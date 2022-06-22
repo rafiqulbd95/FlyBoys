@@ -360,7 +360,8 @@ p {
   position: relative;
 }
 
-.roadmap-area .roadmap-slider .next-arrow, .roadmap-area .roadmap-slider .prev-arrow {
+.roadmap-area .roadmap-slider .next-arrow,
+.roadmap-area .roadmap-slider .prev-arrow {
   position: absolute;
   background: #FFFFFF;
   border: 1px solid #000000;
@@ -795,6 +796,7 @@ p {
 
 .mint-now-area .mint-area .progress-bar {
   position: relative;
+  background: none;
 }
 
 .mint-now-area .mint-area .progress-bar .progress-bg {
@@ -806,23 +808,36 @@ p {
 
 .mint-now-area .mint-area .progress-bar .progress-lin {
   position: relative;
-  background: #fff;
   z-index: 11;
-  height: 4px;
+  height: 42px;
 }
 
 .mint-now-area .mint-area .progress-bar .progress-lin::before {
+  content: '';
+  height: 4px;
+  background: #fff;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+}
+
+.mint-now-area .mint-area .progress-bar .progress-lin span::before {
   content: '';
   width: 14px;
   height: 14px;
   background: #fff;
   position: absolute;
   left: 0;
-  top: -5px;
+  top: 50%;
   border-radius: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
-.mint-now-area .mint-area .progress-bar .progress-lin::after {
+.mint-now-area .mint-area .progress-bar .progress-lin span::after {
   content: '';
   background-image: url(../img/progres-icon.png);
   background-size: contain;
@@ -832,7 +847,9 @@ p {
   width: 38px;
   height: 38px;
   right: -9px;
-  top: -17px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .footer-area {

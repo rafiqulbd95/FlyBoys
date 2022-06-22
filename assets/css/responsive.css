@@ -9,6 +9,20 @@
     .mint-btn{
         justify-content: center;
     }
+
+    .mint-now-area .mint-area{
+        height: 850px !important;
+    }
+    .mint-now-area .nav-link{
+        padding: 10px 0 !important;
+    }
+    .mint-now-area .mint-shap{
+        display: none;
+    }
+    .mint-now-area .mint-area::before,
+    .mint-now-area .mint-area::after{
+        display: none;
+    }
 }
 
 
@@ -90,7 +104,13 @@
         width: 206px !important;
         height: 280px !important;
     }
-    
+
+    .mint-now-area .mint-area .mint-box .mint-box-tx{
+        display: block;
+    }
+    .mint-now-area .mint-area .mint-box .mint-amount{
+        display: block;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -176,6 +196,10 @@
      .swiper-slide{
         width: 206px !important;
         height: 280px !important;
+    }
+
+    .mint-now-area .mint-area .mint-box .mint-amount{
+        display: block;
     }
 }
 /* Medium devices (landscape tablets, 768px and up) */
